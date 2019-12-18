@@ -54,7 +54,7 @@ def find_duplicate_movies(src):
 def timeit_helper():
     """Part A:  Obtain some profiling measurements using timeit"""
     t = timeit.Timer(stmt="find_duplicate_movies('movies.txt')", setup='from\
-    main import find_duplicate_movies')
+    __main__ import find_duplicate_movies')
     result = t.repeat(repeat=7, number=5)
     average = min(result)/float(5)
     print('Best time across 7 repeats of 5 runs per repeat:\
